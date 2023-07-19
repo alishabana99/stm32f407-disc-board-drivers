@@ -105,7 +105,6 @@ $Delay\space Achieved\space = N×{1\over SYSCLK} = {N\over SYSCLK}$
 
 - **If the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99.**
 
----
 
 #### Usage Hints and Tips
 
