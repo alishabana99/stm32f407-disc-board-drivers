@@ -75,7 +75,7 @@ int main(){
 	while(1){
 
 		adc_output = ADC_Read(&adc1_handle);
-		printf("%d\n\r",adc_output);
+		//printf("%d\n\r",adc_output);
 	}
 
 
