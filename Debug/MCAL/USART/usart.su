@@ -1,0 +1,5 @@
+../MCAL/USART/usart.c:70:13:USART_ConfigureGPIOPins	32	static
+../MCAL/USART/usart.c:149:13:USART_SetBRRValues	32	static
+../MCAL/USART/usart.c:226:6:USART_Init	16	static
+../MCAL/USART/usart.c:300:6:USART_SendChar	16	static
+../MCAL/USART/usart.c:318:6:USART_ReceiveChar	16	static

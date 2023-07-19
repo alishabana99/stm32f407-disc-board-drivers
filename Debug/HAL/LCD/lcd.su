@@ -1,0 +1,7 @@
+../HAL/LCD/lcd.c:82:13:LCD_LatchBits	16	static
+../HAL/LCD/lcd.c:140:13:LCD_SendCommand	16	static
+../HAL/LCD/lcd.c:157:13:LCD_SendData	16	static
+../HAL/LCD/lcd.c:172:6:LCD_Init	8	static
+../HAL/LCD/lcd.c:229:6:LCD_PrintChar	16	static
+../HAL/LCD/lcd.c:244:6:LCD_PrintString	24	static
+../HAL/LCD/lcd.c:262:6:LCD_PrintInt32	40	static

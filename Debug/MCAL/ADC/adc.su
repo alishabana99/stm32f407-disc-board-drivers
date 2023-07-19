@@ -1,0 +1,5 @@
+../MCAL/ADC/adc.c:64:13:ADC_ConfigureGPIOPins	16	static
+../MCAL/ADC/adc.c:121:6:ADC_Init	16	static
+../MCAL/ADC/adc.c:169:6:ADC_ConfigureChannel	24	static
+../MCAL/ADC/adc.c:235:6:ADC_Start	16	static
+../MCAL/ADC/adc.c:251:10:ADC_Read	16	static

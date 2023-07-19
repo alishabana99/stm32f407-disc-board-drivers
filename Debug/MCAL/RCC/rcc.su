@@ -1,0 +1,9 @@
+../MCAL/RCC/rcc.c:23:6:RCC_EnableAHB1Clock	16	static
+../MCAL/RCC/rcc.c:27:6:RCC_EnableAHB2Clock	16	static
+../MCAL/RCC/rcc.c:40:6:RCC_EnableAHB3Clock	16	static
+../MCAL/RCC/rcc.c:52:6:RCC_EnableAPB1Clock	16	static
+../MCAL/RCC/rcc.c:65:6:RCC_EnableAPB2Clock	16	static
+../MCAL/RCC/rcc.c:94:6:RCC_EnableHSI	8	static
+../MCAL/RCC/rcc.c:129:6:RCC_SetAHBPrescaler	4	static
+../MCAL/RCC/rcc.c:170:6:RCC_SetAPB1Prescaler	4	static
+../MCAL/RCC/rcc.c:203:6:RCC_SetAPB2Prescaler	4	static

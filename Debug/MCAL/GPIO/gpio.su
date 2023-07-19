@@ -1,0 +1,7 @@
+../MCAL/GPIO/gpio.c:31:6:GPIO_SetPinPull	16	static
+../MCAL/GPIO/gpio.c:49:6:GPIO_SetPinOutputSpeed	16	static
+../MCAL/GPIO/gpio.c:65:6:GPIO_SetPinOutputType	16	static
+../MCAL/GPIO/gpio.c:81:6:GPIO_SetPinAF	16	static
+../MCAL/GPIO/gpio.c:104:6:GPIO_SetPinMode	16	static
+../MCAL/GPIO/gpio.c:123:6:GPIO_SetPinState	16	static
+../MCAL/GPIO/gpio.c:150:19:GPIO_GetPinState	16	static

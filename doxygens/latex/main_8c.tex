@@ -1,0 +1,108 @@
+\doxysection{Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Src/main.c@{Src/main.c}}
+
+
+Bare-\/metal LED flasher.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}}~(0x4000000\+UL)
+\begin{DoxyCompactList}\small\item\em The base address of the peripherals in ARM\textquotesingle{}s memory map. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8c_a75ed3ccf990fffd8a1da83ebac2a301e}{AHB1\+\_\+\+OFFSET}}~(0x00002000\+UL)
+\begin{DoxyCompactList}\small\item\em We found in the datasheet that GPIOA interacts with AHB1 bus. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8c_a332d651c1bb055e0a39be7424afc1b5f}{AHB1\+\_\+\+BASE}}~(\mbox{\hyperlink{main_8c_a9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + \mbox{\hyperlink{main_8c_a75ed3ccf990fffd8a1da83ebac2a301e}{AHB1\+\_\+\+OFFSET}})
+\begin{DoxyCompactList}\small\item\em AHB1 bus base address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8c_ad398084990cde6fd88d60ef93fb80cf2}{GPIOA\+\_\+\+OFFSET}}~(0x00000000\+UL)
+\begin{DoxyCompactList}\small\item\em GPIOA\textquotesingle{}s offset from AHB1 bus base address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{main_8c_ad7723846cc5db8e43a44d78cf21f6efa}{GPIOA\+\_\+\+BASE}}~(\mbox{\hyperlink{main_8c_a332d651c1bb055e0a39be7424afc1b5f}{AHB1\+\_\+\+BASE}} + \mbox{\hyperlink{main_8c_ad398084990cde6fd88d60ef93fb80cf2}{GPIOA\+\_\+\+OFFSET}})
+\begin{DoxyCompactList}\small\item\em GPIOA Port base address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bare-\/metal LED flasher. 
+
+\begin{DoxyAuthor}{Author}
+Ali Shabana 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+June 29, 2023 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyNote}{Note}
+This file requires the XYZ library to be installed.
+\end{DoxyNote}
+
+
+Steps\+:
+\begin{DoxyEnumerate}
+\item Find out the specified LED from the board\textquotesingle{}s user manual
+\item Find out the specified LED Port and pin number from the datasheet
+\item Find out how to address the led\textquotesingle{}s port \mbox{[}memory mapping in datasheet\mbox{]} 
+\end{DoxyEnumerate}
+
+Definition in file \mbox{\hyperlink{}{main.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8c_a332d651c1bb055e0a39be7424afc1b5f}\label{main_8c_a332d651c1bb055e0a39be7424afc1b5f} 
+\index{main.c@{main.c}!AHB1\_BASE@{AHB1\_BASE}}
+\index{AHB1\_BASE@{AHB1\_BASE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{AHB1\_BASE}{AHB1\_BASE}}
+{\footnotesize\ttfamily \#define AHB1\+\_\+\+BASE~(\mbox{\hyperlink{main_8c_a9171f49478fa86d932f89e78e73b88b0}{PERIPH\+\_\+\+BASE}} + \mbox{\hyperlink{main_8c_a75ed3ccf990fffd8a1da83ebac2a301e}{AHB1\+\_\+\+OFFSET}})}
+
+
+
+AHB1 bus base address. 
+
+\Hypertarget{main_8c_a75ed3ccf990fffd8a1da83ebac2a301e}\label{main_8c_a75ed3ccf990fffd8a1da83ebac2a301e} 
+\index{main.c@{main.c}!AHB1\_OFFSET@{AHB1\_OFFSET}}
+\index{AHB1\_OFFSET@{AHB1\_OFFSET}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{AHB1\_OFFSET}{AHB1\_OFFSET}}
+{\footnotesize\ttfamily \#define AHB1\+\_\+\+OFFSET~(0x00002000\+UL)}
+
+
+
+We found in the datasheet that GPIOA interacts with AHB1 bus. 
+
+Details\+:
+\begin{DoxyItemize}
+\item Data sheet\textquotesingle{}s block diagram tells that GPIOA is connected to AHB1 directly
+\item AHB1 has an offset from PERIPH\+\_\+\+BASE 
+\end{DoxyItemize}\Hypertarget{main_8c_ad7723846cc5db8e43a44d78cf21f6efa}\label{main_8c_ad7723846cc5db8e43a44d78cf21f6efa} 
+\index{main.c@{main.c}!GPIOA\_BASE@{GPIOA\_BASE}}
+\index{GPIOA\_BASE@{GPIOA\_BASE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{GPIOA\_BASE}{GPIOA\_BASE}}
+{\footnotesize\ttfamily \#define GPIOA\+\_\+\+BASE~(\mbox{\hyperlink{main_8c_a332d651c1bb055e0a39be7424afc1b5f}{AHB1\+\_\+\+BASE}} + \mbox{\hyperlink{main_8c_ad398084990cde6fd88d60ef93fb80cf2}{GPIOA\+\_\+\+OFFSET}})}
+
+
+
+GPIOA Port base address. 
+
+\Hypertarget{main_8c_ad398084990cde6fd88d60ef93fb80cf2}\label{main_8c_ad398084990cde6fd88d60ef93fb80cf2} 
+\index{main.c@{main.c}!GPIOA\_OFFSET@{GPIOA\_OFFSET}}
+\index{GPIOA\_OFFSET@{GPIOA\_OFFSET}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{GPIOA\_OFFSET}{GPIOA\_OFFSET}}
+{\footnotesize\ttfamily \#define GPIOA\+\_\+\+OFFSET~(0x00000000\+UL)}
+
+
+
+GPIOA\textquotesingle{}s offset from AHB1 bus base address. 
+
+Details\+:
+\begin{DoxyItemize}
+\item GPIOA port is the first peripheral in this bus, so the offset is 0 
+\end{DoxyItemize}\Hypertarget{main_8c_a9171f49478fa86d932f89e78e73b88b0}\label{main_8c_a9171f49478fa86d932f89e78e73b88b0} 
+\index{main.c@{main.c}!PERIPH\_BASE@{PERIPH\_BASE}}
+\index{PERIPH\_BASE@{PERIPH\_BASE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{PERIPH\_BASE}{PERIPH\_BASE}}
+{\footnotesize\ttfamily \#define PERIPH\+\_\+\+BASE~(0x4000000\+UL)}
+
+
+
+The base address of the peripherals in ARM\textquotesingle{}s memory map. 
+
